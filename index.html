@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת ייעוץ רפואי - התחברות</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>התחברות למערכת</h1>
+        <form id="loginForm">
+            <label style="text-align: right;" for="username">שם משתמש</label>
+            <input style="text-align: right;" type="text" id="username" placeholder="הכנס שם משתמש" required>
+            
+            <label style="text-align: right;" for="password">סיסמה</label>
+            <input style="text-align: right;" type="password" id="password" placeholder="הכנס סיסמה" required>
+            
+            <button type="submit">התחבר</button>
+        </form>
+        <p id="error-message" class="hidden">שם המשתמש או הסיסמה אינם נכונים</p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
