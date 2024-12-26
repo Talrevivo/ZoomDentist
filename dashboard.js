@@ -4,8 +4,6 @@ const appointments = [
     { id: 3, date: "2024-12-27", time: "14:00", doctor: "ד'ר רוזן" }
 ];
 
-const goToChatButton = document.getElementById("goToChat");
-
 function renderAppointments() {
     const appointmentList = document.getElementById("appointmentList");
     appointmentList.innerHTML = ""; // מנקה את הרשימה הקיימת
@@ -38,15 +36,8 @@ document.getElementById("addAppointment").addEventListener("click", function() {
     if (newAppointment.date && newAppointment.time && newAppointment.doctor) {
         appointments.push(newAppointment);
         renderAppointments();
-
-        // הצגת כפתור מעבר לצ'אט
-        goToChatButton.classList.remove("hidden");
+        // הכפתור "עבור לצ'אט" הוסר, אין צורך להציג אותו
     }
-});
-
-// מעבר לעמוד הצ'אט
-goToChatButton.addEventListener("click", function() {
-    window.location.href = "chat.html";
 });
 
 // הצגת התורים בתחילת הטעינה
